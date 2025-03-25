@@ -4,6 +4,7 @@ public class ComparableAssociation<K, V> implements Comparable<ComparableAssocia
     K key;
     V value;
 
+    // compara 2 objetos basandose en su key y valor 
     public ComparableAssociation(K key, V value) {
         this.key = key;
         this.value = value;
