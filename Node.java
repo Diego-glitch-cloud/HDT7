@@ -1,4 +1,4 @@
-public class Node<K, V> {
+public class Node<K extends Comparable<K>, V> {
     ComparableAssociation<K, V> info;
     Node<K, V> hijoIzquierdo, hijoDerecho;
 
@@ -9,11 +9,9 @@ public class Node<K, V> {
         this.info = info;
         this.hijoIzquierdo = this.hijoDerecho = null;
     }
-    
 
     @Override
     public String toString() {
-        return "[Clave: " + info.key + ", Valor: " + info.value + "]";
+        return "[Clave o Key: " + info.key + ", Valor o Value: " + info.value + "]";
     }
-
 }

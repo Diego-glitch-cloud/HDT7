@@ -1,8 +1,8 @@
-public class ComparableAssociation<K, V> implements Comparable<ComparableAssociation<K, V>> {
+public class ComparableAssociation<K extends Comparable<K>, V> implements Comparable<ComparableAssociation<K, V>> {
     K key;
     V value;
 
-    // compara 2 objetos basandose en su key y valor 
+    // Constructor 
     public ComparableAssociation(K key, V value) {
         this.key = key;
         this.value = value;
@@ -10,6 +10,6 @@ public class ComparableAssociation<K, V> implements Comparable<ComparableAssocia
 
     @Override
     public int compareTo(ComparableAssociation<K, V> other) {
-        return ((Comparable<K>) this.key).compareTo(other.key);
+        return this.key.compareTo(other.key); 
     }
 }

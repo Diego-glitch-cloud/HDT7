@@ -19,7 +19,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         
         while (true) {
-            System.out.println("Ingrese el SKU o 'salir':");
+            System.out.println("Ingrese el SKU o (salir):");
             String sku = scanner.nextLine();
             
             if ("salir".equalsIgnoreCase(sku)) {
@@ -29,14 +29,14 @@ public class Main {
             Producto productoEncontrado = productoBST.buscarPorKey(sku);
             
             if (productoEncontrado != null) {
-                System.out.println("Producto encontrado:");
+                System.out.println("Producto solicitado:");
                 System.out.println("SKU: " + productoEncontrado.getSku());
-                System.out.println("Nombre: " + productoEncontrado.getProductName());
-                System.out.println("Categoría: " + productoEncontrado.getCategory());
-                System.out.println("Precio de venta: $" + productoEncontrado.getPriceRetail());
-                System.out.println("Precio actual: $" + productoEncontrado.getPriceCurrent());
+                System.out.println("Nombre del producto: " + productoEncontrado.getProductName());
+                System.out.println("Categoría perteneciente: " + productoEncontrado.getCategory());
+                System.out.println("Precio de venta en dolares: " + productoEncontrado.getPriceRetail());
+                System.out.println("Precio actual en dolares: " + productoEncontrado.getPriceCurrent());
             } else {
-                System.out.println("Producto no encontrado.");
+                System.out.println("El producto no se encontró");
             }
         }
         
