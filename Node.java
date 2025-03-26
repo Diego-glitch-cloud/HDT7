@@ -1,5 +1,3 @@
-package HDT7;
-
 public class Node<K, V> {
     ComparableAssociation<K, V> info;
     Node<K, V> hijoIzquierdo, hijoDerecho;

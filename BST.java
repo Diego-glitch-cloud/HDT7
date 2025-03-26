@@ -1,5 +1,3 @@
-package HDT7;
-
 public class BST<K extends Comparable<K>, V> {
     private Node<K, V> nodoRaiz;
 

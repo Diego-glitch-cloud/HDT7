@@ -1,5 +1,3 @@
-package HDT7;
-
 public class ComparableAssociation<K, V> implements Comparable<ComparableAssociation<K, V>> {
     K key;
     V value;
